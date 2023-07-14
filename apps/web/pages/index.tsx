@@ -16,6 +16,7 @@ import {
   OngoingAnime,
   TrendingAnime,
 } from "@bilibili-dl/interfaces/web/home/anime.type";
+import Script from "next/script";
 
 /**
  * Index page.
@@ -29,11 +30,15 @@ export default function Index({
   carouselList: CarouselAnime;
 }): JSX.Element {
   return (
-    <Stack spacing="lg">
-      <Popular popularList={popularList} />
-      <Anime animeList={carouselList} />
-      <Recomendation />
-    </Stack>
+    <>
+      <Stack spacing="lg">
+        <Popular popularList={popularList} />
+        <Anime animeList={carouselList} />
+        <Recomendation />
+      </Stack>
+      <Script src="https://accounts.google.com/gsi/client" async />
+      <Script src="static/google.js" type="module" />
+    </>
   );
 }
 

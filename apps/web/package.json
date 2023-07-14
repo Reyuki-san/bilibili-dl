@@ -39,6 +39,7 @@
         "@next/eslint-plugin-next": "latest",
         "@types/accept-language-parser": "^1.5.3",
         "@types/cors": "^2.8.12",
+        "@types/google.accounts": "^0.0.7",
         "@types/node": "^18.7.3",
         "@types/react": "^18.0.17",
         "@types/react-dom": "^18.0.6",

@@ -144,6 +144,7 @@ __metadata:
     "@tabler/icons-react": ^2.20.0
     "@types/accept-language-parser": ^1.5.3
     "@types/cors": ^2.8.12
+    "@types/google.accounts": ^0.0.7
     "@types/node": ^18.7.3
     "@types/react": ^18.0.17
     "@types/react-dom": ^18.0.6
@@ -1127,6 +1128,13 @@ __metadata:
   version: 1.0.0
   resolution: "@types/estree@npm:1.0.0"
   checksum: 910d97fb7092c6738d30a7430ae4786a38542023c6302b95d46f49420b797f21619cdde11fa92b338366268795884111c2eb10356e4bd2c8ad5b92941e9e6443
+  languageName: node
+  linkType: hard
+
+"@types/google.accounts@npm:^0.0.7":
+  version: 0.0.7
+  resolution: "@types/google.accounts@npm:0.0.7"
+  checksum: a9c9537f3a1ba6dbd9035cf2af6e920174c747c020601baee1a6fc8e0a4054906136dec2e4fdb9452eb3ac3834783e1ee16723d1c65d4a0ceb5285164c9d9016
   languageName: node
   linkType: hard
 
