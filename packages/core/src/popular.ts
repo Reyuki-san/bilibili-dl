@@ -16,7 +16,7 @@ export const getPopularList = async (
     const response = await fetchAPI
         .get(getGatewayURL('v2').concat('home/popular'), {
             searchParams: {
-                platform: 'web',
+                platform: 'tv',
                 s_locale: locale,
                 pn: 1,
                 ps: 50,

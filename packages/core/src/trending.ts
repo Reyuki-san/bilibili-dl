@@ -16,7 +16,7 @@ export const getTrendingList = async (
     const trending = await fetchAPI
         .get(getGatewayURL('v2').concat('/home/ogv/trending'), {
             searchParams: {
-                platform: 'web',
+                platform: 'tv',
                 s_locale: locale,
             },
             headers: {

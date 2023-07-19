@@ -18,7 +18,7 @@ export const getRecommendList = async (
     const response = await fetchAPI
         .get(getGatewayURL('v2').concat('home/recommend'), {
             searchParams: {
-                platform: 'web',
+                platform: 'tv',
                 s_locale: locale,
                 pn,
                 ps: pn === 1 ? 50 : 20,

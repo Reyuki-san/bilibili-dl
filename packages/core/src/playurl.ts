@@ -27,39 +27,36 @@ export const getPlayUrl = async (
     retryCount: number = 0,
 ): Promise<PlayUrlTransformed | string> => {
     try {
-        const response = await fetchAPI(
-            getGatewayURL(undefined).concat('playurl'),
-            {
-                searchParams: {
-                    s_locale: locale,
-                    platform: 'web',
-                    ...(type === 'video'
-                        ? {
-                              aid: id,
-                          }
-                        : {
-                              ep_id: id,
-                          }),
-                },
-                timeout: {
-                    connect: 3000,
-                    request: 5000,
-                    response: 5000,
-                    socket: 4000,
-                    send: 5000,
-                    secureConnect: 5000,
-                    read: 5000,
-                    lookup: 5000,
-                },
-                headers: {
-                    Origin: 'https://www.bilibili.tv',
-                    Referer: 'https://www.bilibili.tv/'.concat(
-                        locale.split('_').at(0)!,
-                    ),
-                    Cookie: process.env.BILI_COOKIE ?? '',
-                },
+        const response = await fetchAPI(getGatewayURL().concat('playurl'), {
+            searchParams: {
+                s_locale: locale,
+                platform: 'web',
+                ...(type === 'video'
+                    ? {
+                          aid: id,
+                      }
+                    : {
+                          ep_id: id,
+                      }),
             },
-        ).json<{
+            timeout: {
+                connect: 3000,
+                request: 5000,
+                response: 5000,
+                socket: 4000,
+                send: 5000,
+                secureConnect: 5000,
+                read: 5000,
+                lookup: 5000,
+            },
+            headers: {
+                Origin: 'https://www.bilibili.tv',
+                Referer: 'https://www.bilibili.tv/'.concat(
+                    locale.split('_').at(0)!,
+                ),
+                Cookie: process.env.BILI_COOKIE ?? '',
+            },
+        }).json<{
             code: number;
             message: string;
             data: {
